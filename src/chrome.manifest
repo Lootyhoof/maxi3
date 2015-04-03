@@ -1,0 +1,4 @@
+skin browser      maxi3 chrome/browser/  
+skin communicator maxi3 chrome/communicator/
+skin mozapps      maxi3 chrome/mozapps/
+skin global       maxi3 chrome/global/

@@ -1,0 +1,173 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.findbar-closebutton {
+  -moz-appearance: none;
+  border: none;
+  padding: 0;
+  padding: 0 2px;
+  list-style-image: url("chrome://global/skin/icons/floatbar_close.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.findbar-closebutton:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.findbar-closebutton:hover:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
+}
+
+.findbar-closebutton > .toolbarbutton-icon {
+  -moz-margin-start: 4px !important;
+  -moz-margin-end: 0px !important;
+  -moz-padding-end: 0px !important;
+  -moz-padding-start: 2px !important;
+}
+
+findbar {
+  min-width: 1px;
+  background: linear-gradient(#F4F4F2, #EEEEEA, #E8E8E3);
+  margin: 0 -2px;
+  border-top: 2px solid;
+  -moz-border-top-colors: #A0A0A0 #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  padding-bottom: 1px;
+  transition-property: margin-bottom, opacity, visibility;
+  transition-duration: 150ms, 150ms, 0s;
+  transition-timing-function: ease-in-out, ease-in-out, linear;
+}
+
+findbar[hidden] {
+  /* Override display:none to make the transition work. */
+  display: -moz-box;
+  visibility: collapse;
+  margin-bottom: -1em;
+  opacity: 0;
+  transition-delay: 0s, 0s, 150ms;
+}
+
+/* find-next button */
+
+.findbar-find-next {
+  list-style-image: url("chrome://global/skin/icons/find.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+
+.findbar-find-next[disabled="true"] {
+  -moz-image-region: rect(16px 16px 32px 0px) !important;
+}
+
+/* find-previous button */
+
+.findbar-find-previous {
+  list-style-image: url("chrome://global/skin/icons/find.png");
+  -moz-image-region: rect(0px 32px 16px 16px);
+}
+
+.findbar-find-previous[disabled="true"] {
+  -moz-image-region: rect(16px 32px 32px 16px) !important;
+}
+
+/* highlight button */
+
+.findbar-highlight {
+  list-style-image: url("chrome://global/skin/icons/find.png");
+  -moz-image-region: rect(0px 48px 16px 32px);
+}
+
+.findbar-highlight[disabled="true"] {
+  -moz-image-region: rect(16px 48px 32px 32px) !important;
+}
+
+.findbar-highlight:active, .findbar-highlight[checked="true"] {
+  -moz-image-region: rect(0px 48px 16px 32px);
+}
+
+.find-status-icon {
+  list-style-image: none;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  -moz-margin-start: 12px;
+  -moz-margin-end: 0px;
+  width: 16px;
+  height: 16px;
+}
+
+.findbar-find-status {
+  margin: 0 !important;
+  -moz-margin-start: 3px !important;
+  padding: 2px !important;
+}
+
+.find-status-icon[status="notfound"] {
+  list-style-image: url("chrome://global/skin/icons/notfound.png");
+}
+
+.findbar-textbox[status="notfound"] {
+  background: #FFEBD7 !important;
+  border: 1px solid #CC6633 !important;
+  box-shadow: 0 0 1.5px #CC6633 !important;
+}
+
+.findbar-textbox[flash="true"] {
+  background: #FFFCD7 !important;
+  border: 1px solid #CCA832 !important;
+  box-shadow: 0 0 1.5px #CCA832 !important;
+}
+
+.find-status-icon[status="wrapped"] {
+  list-style-image: url("chrome://global/skin/icons/wrap.png");
+}
+
+#stylish #findbar {
+  background: none !important;
+}
+
+.findbar-find-next.tabbable,
+.findbar-find-previous.tabbable,
+.findbar-highlight.tabbable {
+  -moz-appearance: none!important;
+  -moz-box-align: center!important;
+  -moz-box-pack: center!important;
+  margin: 2px!important;
+  padding: 2px!important;
+  border: 1px solid transparent!important;
+  border-radius: 3px!important;
+  background: transparent!important;
+}
+
+.findbar-find-next.tabbable:not([disabled]):hover,
+.findbar-find-previous.tabbable:not([disabled]):hover,
+.findbar-highlight.tabbable:not([disabled]):not([checked="true"]):hover {
+  background: transparent
+              linear-gradient(#FDFEFF, #EFF6FF 49%,
+                                   #D4E9FF 51%, #F7FBFF)!important;
+  background-clip: padding-box !important;
+  border: 1px solid!important;
+  border-color: #3298FF!important;
+  box-shadow: 0 0 0 1px #FFFFFF inset,
+              0 0 1.5px #3399FF!important;
+}
+
+.findbar-find-next.tabbable:active:not([disabled="true"]),
+.findbar-find-previous.tabbable:active:not([disabled="true"]),
+.findbar-highlight.tabbable:active:not([disabled="true"]),
+.findbar-highlight.tabbable[checked="true"] {
+  background: transparent
+              linear-gradient(#E7E6E2, #E3E2DC 49%,
+                                   #E1E0DB 51%, #DCDBD4)!important;
+  background-clip: padding-box;
+  border: 1px solid;
+  border-color: #9F9C95!important;
+  box-shadow: 0 1px 0 #C2C0BB inset,
+              0 1px 3px 1px #CCCBC4 inset!important;
+}
+
+.find-status-icon[status="pending"] {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+}
+
+.findbar-find-fast.find-status-icon {
+  margin-top: 0px !important;
+}

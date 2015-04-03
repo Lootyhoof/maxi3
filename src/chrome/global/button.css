@@ -1,0 +1,161 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== button.css =====================================================
+  == Styles used by the XUL button element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* :::::::::: button :::::::::: */
+
+button {
+  -moz-appearance: none;
+  margin: 1px 8px 2px 0px;
+  min-width: 6.3em;
+  background:-moz-linear-gradient(#FEFEFE, #EFEFEF);
+  background-clip: padding-box;
+  border-radius: 2px;
+  border: 1px solid;
+  border-color: #AAA;
+  box-shadow: #E6E6E6 1px 1px 2px 0px;
+  color: #000000;
+  -moz-padding-start: 8px;
+  -moz-padding-end: 8px;
+}
+
+button:not([disabled="true"]):hover {
+  background: transparent
+              linear-gradient(#fefeff, #eff6ff 49%, 
+                                   #d6eaff 51%, #ffffff);
+  border-color: #3499ff;
+  box-shadow: 0 0 2px 1px rgba(51,152,254,0.4);
+}
+
+button:not([disabled="true"]):hover:active,
+button[open="true"],
+button[checked="true"] {
+  background: linear-gradient(#dddddd, #efefef);
+  border-color: #bcbcbc;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.button-box {
+  border: 1px solid transparent;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  -moz-padding-start: 3px;
+  -moz-padding-end: 4px;
+}
+
+.button-text {
+  margin: 0 !important;
+  text-align: center;
+}
+
+/* .......... focused state .......... */
+
+button:-moz-focusring {
+  background: transparent
+              linear-gradient(#fefeff, #eff6ff 49%, 
+                                   #d6eaff 51%, #ffffff);
+  border-color: #3499ff;
+  box-shadow: 0 0 2px 1px rgba(51,152,254,0.4);
+}
+
+/* .......... default state .......... */
+
+button[default="true"]:not([disabled="true"]):hover {
+  border: 1px solid;
+  border-color: #3298FF;
+}
+
+button[default="true"]:not([disabled="true"]):hover:active,
+button[default="true"][open="true"],
+button[default="true"][checked="true"] {
+  border: 1px solid;
+  border-color: #9F9C95;
+}
+
+/* .......... disabled state .......... */
+
+button[disabled="true"] {
+  opacity: .5;
+  color: #666666;
+}
+
+/* ::::: menu/menu-button buttons ::::: */
+
+button[type="menu-button"] {
+  margin: 0;
+  border: none;
+}
+
+.button-menu-dropmarker,
+.button-menubutton-dropmarker {
+  -moz-appearance: none !important;
+  margin: 1px;
+  background-color: transparent;
+  border: none;
+  width: 12px;
+  height: 12px;
+  list-style-image: url("chrome://global/skin/icons/tb_dropdown.png");
+}
+
+/* ::::: plain buttons ::::: */
+
+button.plain {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+button[type="disclosure"] {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  -moz-appearance: none;
+  list-style-image: url("chrome://global/skin/tree/twisty-clsd.png");
+  min-width: 0px !important;
+  background-color: transparent;
+}
+
+button[type="disclosure"][open="true"] {
+  list-style-image: url("chrome://global/skin/tree/twisty-open.png");
+}
+
+
+notification button {
+  background: transparent
+              linear-gradient(#FCFCFD, #E4F0FA 49%,
+                                   #E3EEFA 51%, #CDE3F7) !important;
+  background-clip: padding-box !important;
+  border-radius: 3px !important;
+  border: 1px solid #748EA9 !important;
+  box-shadow: none !important;
+  color: #003366 !important;
+}
+
+notification button:not(:active):hover {
+  background: transparent
+              linear-gradient(#FCFDFE, #EDF5FE 49%,
+                                   #EAF3FE 51%, #DAEBFE) !important;
+  background-clip: padding-box !important;
+  border: 1px solid #546F89 !important;
+  box-shadow: none !important;
+  color: #003366 !important;
+}
+
+notification button:not([disabled="true"]):hover:active,
+notification button[open="true"],
+notification button[checked="true"] {
+  background: transparent
+              linear-gradient(#CFE6F8, #D5E8F8 49%,
+                                   #D6E9F8 51%, #DBEBF8) !important;
+  background-clip: padding-box !important;
+  border: 1px solid #748EA9 !important;
+  box-shadow: none !important;
+  color: #003366 !important;
+}
