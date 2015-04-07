@@ -12,8 +12,14 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
+#main-window:after {
+  color: black !important;
+}
 
-
+#main-window:-moz-lwtheme-brighttext:after {
+  color: white !important;
+  text-shadow: none !important;
+}
 
 #menubar-items {
   -moz-box-orient: vertical; /* for flex hack */
@@ -93,9 +99,6 @@
   margin-top: -3px !important;
 }
 
-#navigator-toolbox:not(:-moz-lwtheme) > #PersonalToolbar {
-  background-image: linear-gradient(#E6E6E1, #E8E8E4, #E6E6E1);
-}
 
 #PersonalToolbar > .toolbarbutton-1,
 #PersonalToolbar > toolbarbutton {
@@ -122,9 +125,9 @@ menupopup {
  }
 }
 
-#nav-bar,
-#nav-bar[collapsed=true]:not([customizing]) + toolbar,
-#nav-bar[collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar {
+#nav-bar:not(:moz-lwtheme),
+#nav-bar[collapsed=true]:not([customizing]):not(:moz-lwtheme) + toolbar,
+#nav-bar[collapsed=true]:not([customizing]):not(:moz-lwtheme) + #customToolbars + #PersonalToolbar {
   background-image: linear-gradient(#F0F0EE, #EAEAE6, #E6E6E1);
 }
 
@@ -1678,9 +1681,6 @@ sidebarheader {
   font-weight: bold;
 }
 
-#navigator-toolbox > toolbar:not(:-moz-lwtheme) {
-  background-color: #E6E6E1;
-}
 
 #browser-bottombox:not(:-moz-lwtheme) {
   background-color: #EEEEEA;
@@ -1844,8 +1844,8 @@ sidebarheader {
 }
 
 .tabbrowser-tab:-moz-lwtheme {
-  color: inherit;
-  text-shadow: inherit;
+  color: black;
+  text-shadow: none;
 }
 
 .tabbrowser-tab .tab-text {
@@ -3474,11 +3474,11 @@ chatbox {
   /* Toolbar shadow behind tabs */
   /* This code is only needed for restored windows (i.e. sizemode=normal)
      because of the border radius on the toolbar below the tab bar. */
-#main-window #nav-bar,
-#main-window > #nav-bar[collapsed=true]:not([customizing]) + toolbar,
-#main-window > #nav-bar[collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar,
-#navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] ~ #PersonalToolbar,
-#navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + toolbar {
+#main-window #nav-bar:not(:-moz-lwtheme),
+#main-window > #nav-bar[collapsed=true]:not([customizing]):not(:-moz-lwtheme) + toolbar,
+#main-window > #nav-bar[collapsed=true]:not([customizing]):not(:-moz-lwtheme) + #customToolbars + #PersonalToolbar,
+#navigator-toolbox[tabsontop="true"]:not([customizing]):not(:-moz-lwtheme) > #nav-bar[collapsed="true"] ~ #PersonalToolbar,
+#navigator-toolbox[tabsontop="true"]:not([customizing]):not(:-moz-lwtheme) > #nav-bar[collapsed="true"] + toolbar {
   border-top: 1px solid;
   -moz-border-top-colors: #767676;
   border-top-left-radius: 2px;
