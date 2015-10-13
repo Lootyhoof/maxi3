@@ -3487,11 +3487,22 @@ chatbox {
 #navigator-toolbox[tabsontop="true"]:not([customizing]):not(:-moz-lwtheme) > #nav-bar[collapsed="true"] + toolbar {
   border-top: 1px solid;
   -moz-border-top-colors: #767676;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
   background-clip: padding-box;
 }
 
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7),
+       (-moz-os-version: windows-win8) {
+  #main-window #nav-bar:not(:-moz-lwtheme),
+  #main-window > #nav-bar[collapsed=true]:not([customizing]):not(:-moz-lwtheme) + toolbar,
+  #main-window > #nav-bar[collapsed=true]:not([customizing]):not(:-moz-lwtheme) + #customToolbars + #PersonalToolbar,
+  #navigator-toolbox[tabsontop="true"]:not([customizing]):not(:-moz-lwtheme) > #nav-bar[collapsed="true"] ~ #PersonalToolbar,
+  #navigator-toolbox[tabsontop="true"]:not([customizing]):not(:-moz-lwtheme) > #nav-bar[collapsed="true"] + toolbar {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+}
+  
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] ~ #PersonalToolbar,
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] ~ toolbar[collapsed="true"]  ~ #PersonalToolbar {
   padding-top: 4px!important;
