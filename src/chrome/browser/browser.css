@@ -722,7 +722,7 @@ menuitem.bookmark-item {
   list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
 
-.toolbarbutton-1:-moz-lwtheme-brighttext {
+toolbar[brighttext] .toolbarbutton-1 {
   list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 }
 
@@ -921,7 +921,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 #home-button.bookmark-item {
   list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
-#home-button.bookmark-item:-moz-lwtheme-brighttext {
+toolbar[brighttext] #home-button.bookmark-item {
   list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 }
 #home-button.bookmark-item > .toolbarbutton-icon {
@@ -950,7 +950,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
 
-#bookmarks-menu-button.bookmark-item:-moz-lwtheme-brighttext {
+toolbar[brighttext] #bookmarks-menu-button.bookmark-item {
   list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 }
 
@@ -1018,7 +1018,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 #TabsToolbar > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
 #TabsToolbar > toolbarpaletteitem > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
-#tabview-button:-moz-lwtheme-brighttext {
+toolbar[brighttext] #tabview-button {
   list-style-image: url(chrome://browser/skin/tabview/tabview-inverted.png);
 }
 
@@ -1069,7 +1069,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 
 #TabsToolbar[tabsontop=true] .toolbarbutton-menubutton-dropmarker,
-.toolbarbutton-menubutton-dropmarker:-moz-lwtheme-brighttext {
+toolbar[brighttext] .toolbarbutton-menubutton-dropmarker {
   list-style-image: url("chrome://global/skin/icons/button_dropdown2.png");
   -moz-image-region: rect(0px, 10px, 10px, 0);
 }
@@ -4081,8 +4081,8 @@ chatbox {
 
 #TabsToolbar[tabsontop=true] #btn_undoclose .toolbarbutton-icon,
 #TabsToolbar[tabsontop=true] #uctb-toolbar-button .toolbarbutton-icon,
-#btn_undoclose:-moz-lwtheme-brighttext .toolbarbutton-icon,
-#uctb-toolbar-button:-moz-lwtheme-brighttext .toolbarbutton-icon {
+toolbar[brighttext] #btn_undoclose .toolbarbutton-icon,
+toolbar[brighttext] #uctb-toolbar-button .toolbarbutton-icon {
   list-style-image: url("chrome://global/skin/icons/nav_undo2.png") !important;
   -moz-image-region: rect(0px, 18px, 18px, 0px) !important;
   width: 18px !important;
@@ -4107,7 +4107,7 @@ chatbox {
 }
 
 #TabsToolbar[tabsontop=true] #undoclosetab-button .toolbarbutton-icon,
-#undoclosetab-button:-moz-lwtheme-brighttext .toolbarbutton-icon {
+toolbar[brighttext] #undoclosetab-button .toolbarbutton-icon {
   list-style-image: url("chrome://global/skin/icons/nav_undo2.png") !important;
   -moz-image-region: rect(0px, 18px, 18px, 0px) !important;
   transform: scaleX(1) rotate(0deg) !important;
