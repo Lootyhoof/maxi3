@@ -2,3 +2,6 @@ skin browser      maxi3 chrome/browser/
 skin communicator maxi3 chrome/communicator/
 skin mozapps      maxi3 chrome/mozapps/
 skin global       maxi3 chrome/global/
+
+skin appver       maxi3 chrome/appver/26/ appversion<27.0.0b1
+skin appver       maxi3 chrome/appver/27/ appversion>=27.0.0b1
