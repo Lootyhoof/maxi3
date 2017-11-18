@@ -6,6 +6,10 @@
   }
 }
 
+menupopup {
+  margin: -1px 0px 0px -4px !important;
+}
+
 /* ::::: app menu button ::::: */
 
 #appmenu-button {
