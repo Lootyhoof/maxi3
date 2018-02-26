@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.0.5
+- size menu backgrounds correctly
+
 ### 2.0.4
 - improve media control appearance
 - make context menus and tooltips more HiDPI-friendly
