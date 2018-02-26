@@ -48,7 +48,7 @@ panel[type="autocomplete-richlistbox"],
   -moz-window-shadow: none;
   border-width: 3px 6px 9px 6px;
   border-style: solid;
-  border-image: url("chrome://global/skin/icons/ul_bg.png") 3 6 9 6 fill repeat stretch;
+  border-image: url("chrome://global/skin/icons/ul_bg.png") 6 12 18 12 fill repeat stretch;
   background-color: transparent;
 }
 
