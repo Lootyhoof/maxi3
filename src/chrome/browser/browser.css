@@ -1172,7 +1172,8 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 .ac-result-type-bookmark,
-.autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/bookmark.png");
   -moz-image-region: rect(0px 54px 18px 36px);
   width: 18px; 
@@ -1181,7 +1182,8 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 .ac-result-type-keyword,
-.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
   list-style-image: url(chrome://global/skin/icons/search_box_icon.png);
   width: 16px;
   height: 16px;
@@ -1189,7 +1191,8 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 .ac-result-type-tag,
-.autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/tag.png");
   width: 16px; 
   height: 16px;
@@ -1217,17 +1220,21 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding: 0 3px;
 }
 
-.autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment) {
+.autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment),
+.private-autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment) {
   color: GrayText;
 }
 
 .autocomplete-treebody::-moz-tree-cell-text(suggesthint, treecolAutoCompleteComment),
-.autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment) {
+.autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment),
+.private-autocomplete-treebody::-moz-tree-cell-text(suggesthint, treecolAutoCompleteComment),
+.private-autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment) {
   color: GrayText;
   font-size: smaller;
 }
 
-.autocomplete-treebody::-moz-tree-cell(suggesthint) {
+.autocomplete-treebody::-moz-tree-cell(suggesthint),
+.private-autocomplete-treebody::-moz-tree-cell(suggesthint) {
   border-top: 1px solid GrayText;
 }
 
@@ -3075,23 +3082,27 @@ html|*#gcli-output-frame {
 
 /* Badge toolbar item */
 
-.toolbarbutton-badge-container {
+.toolbarbutton-badge-container,
+.toolbarbutton-badge-stack {
   margin: 0;
   padding: 0;
   position: relative;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-container {
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-container,
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-stack {
   padding: 2px 5px;
 }
 
-.toolbarbutton-1 > .toolbarbutton-badge-container > .toolbar-icon {
+.toolbarbutton-1 > .toolbarbutton-badge-container > .toolbar-icon,
+.toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbar-icon {
   position: absolute;
   top: 2px;
   right: 2px;
 }
 
-.toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]) {
+.toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]),
+.toolbarbutton-badge-stack > .toolbarbutton-icon[label]:not([label=""]) {
   -moz-margin-end: 0;
 }
 
