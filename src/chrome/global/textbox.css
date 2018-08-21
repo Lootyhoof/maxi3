@@ -22,7 +22,7 @@ textbox {
   box-shadow: 0px 1px 1px #F0F0F0 inset;
   border: 1px solid #9F9C95;
   padding: 1px;
-  -moz-padding-start: 2px;
+  padding-inline-start: 2px;
   background-color: #FFFFFF;
   color: -moz-FieldText;
   transition: background-color .02s,
