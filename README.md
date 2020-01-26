@@ -1,5 +1,5 @@
 # Maxi3
-![Preview](http://i66.tinypic.com/9h2ys5.png)
+![Preview](https://i.imgur.com/pucEQNR.png)
 
 Fork of the theme "MX3" by dkgo for Pale Moon.
 
