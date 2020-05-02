@@ -34,6 +34,7 @@
   --toolbarbutton-active-box-shadow: 0 1px 0 rgba(194,192,187,.9) inset, 0 1px 3px 1px rgba(194,192,187,.9) inset;
   --toolbarbutton-checked-background: transparent linear-gradient(#FFFFFF, #FFFFFF 49%, #FDFDFD 51%, #F7F7F5);
   --toolbarbutton-checked-box-shadow: 0 0 1px 1px #EFEEED inset;
+  --toolbarbutton-color: #000000;
   --toolbarbutton-dropmarker-active-background: #F3F3F1;
   --toolbarbutton-dropmarker-active-box-shadow: none;
   --toolbarbutton-hover-background: transparent linear-gradient(#FEFEFF, #EDF6FF 49%, #D4E9FF 51%, #FAFCFF);
@@ -120,6 +121,7 @@
   -moz-appearance: none;
   border-style: none;
   background-color: var(--dialog-color);
+  color: var(--toolbarbutton-color);
 }
 
 #main-window[tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #TabsToolbar {
