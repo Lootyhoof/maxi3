@@ -1902,6 +1902,10 @@ sidebarheader {
   -moz-image-region: rect(0px, 20px, 20px, 0px)!important;
 }
 
+toolbar:not([brighttext]) #alltabs-button {
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab_list_dark.png") !important;
+}
+
 #alltabs-button:hover {
   -moz-image-region: rect(0px, 40px, 20px, 20px)!important;
 }
